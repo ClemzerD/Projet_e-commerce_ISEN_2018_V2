@@ -1,6 +1,6 @@
 html
 {
-	background-color: grey;
+	background-color: white;
 }
 
 *
@@ -8,16 +8,25 @@ html
     font-family: arial;
 }
 
-body 
-{
-	margin: 0px;
+.Titre {
+	text-align: center;
+	font-size: 130px;
+	padding-top: 370px;
+}
+
+a {
+	text-decoration: none;
+	font-family: Onyx;
+	color:black;}
+.img {
+	text-align: center;
+	margin-top: -270px;
 }
 
 header
 {
-	background-color: black;
+	background-color: white;
 	position: fixed;
-	text-align: center;
 	width: 100%;
 	/*height: 100px;*/
 	margin-top: 0px;
@@ -28,7 +37,7 @@ header
 
 footer
 {
-	background-color: black;
+	background-color: white;
 	left:0px;
 	bottom:0px;
 	height: 50px;
@@ -39,7 +48,7 @@ footer
 footer div
 {
 	width: 100%;
-	color: white;
+	color: black;
     padding-top:20px;
 	text-align: center;
 }
@@ -51,15 +60,15 @@ nav
 
 nav a:hover
 {
-	color: #aaa;
+	color: black;
 }
 
 nav a 
 {
-	border: 1px solid white;
+	border: 1px solid black;
 	padding: 3px;
 	transition:color linear 0.2s;
-	color: white;
+	color: black;
 	text-decoration: none;
 }
 
@@ -69,13 +78,12 @@ section
 {
 	padding-top: 100px;
 	margin-right: 30px;
-	margin-left: 30px;
     padding-bottom: 100px; 
 }
 
 .pres
 {
-	margin-left: 10px;
+	margin-top: 130px;
 	width: 100%;
 	min-width: 50%;
 	text-align: center;
@@ -89,7 +97,7 @@ section
 
 .pres figure a
 {
-	color: white;
+	color: black;
 	text-decoration: none;
 	margin:10px;
 	display: inline-block;
@@ -98,26 +106,26 @@ section
 
 .pres figure a:hover
 {
-	color: #aaa;
+	color: black;
 }
 
 .text
 {
-	color: white;
+	color: black;
 	margin: 10px;
 	text-align: center;
 }
 
 .text a:hover
 {
-	color: #aaa;
+	color: black;
 }
 
 .text a
 {
 	padding: 3px;
 	transition:color linear 0.2s;
-	color: white;
+	color: black;
 	text-decoration: none;
 }
 
@@ -128,17 +136,24 @@ section
 
 #headertitle
 {
-	margin-left: 10px;
-	font-size: 50px;
-	color: white;
+	font-family: Onyx;
+	font-size: 54px;
+	color: black;
 	text-decoration: none;
-
 }
 
 #headerphoto
 {
-	margin:10px;
-	float: left;
+
+}
+
+.menu
+{
+	font-family: Arial;
+	float: right;
+	margin-left: 20px;
+	color: black;
+	text-decoration: none;
 }
 
 #photopresachat
@@ -152,18 +167,17 @@ section
 
 .menuCategory
 {
+	padding: 7px;
 	display: inline-block;
-	position: relative;
-	padding: 5px 10px;
-
+	text-decoration: none;
+	color: black;
 }
-
 
 article p 
 {
 	padding-right: 10px;
 	margin-left: 10px;
-	margin-right: 150px;
+	margin-right: 100px;
 	width: 100%
 	min-width:50%;
 	text-align: justify;
@@ -172,17 +186,8 @@ article p
 
 aside
 {
-	text-align: left;
 	position: fixed;
-	top:140px;
+	top:210px;
 	right: 30px;
 	height: 100px;
-	border:3px solid black;
-	padding: 5px 5px;
-}
-
-#button
-{
-	color: black;
-	text-decoration: none;
 }
