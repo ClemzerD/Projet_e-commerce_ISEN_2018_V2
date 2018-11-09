@@ -1,13 +1,10 @@
 <header><a id="headertitle" href="main.php">Rituel</a>
-
-    <!--Sous Menu-->
+    
     <nav>
          
         <div class="menuCategory">
-			<form action = "verif-form.php" method = "get">
-    		<input type="search" name="recherche" id="recherche" placeholder="recherche">
-			<input type="submit" name="Accepter" value="Accepter">
-			</form>
+    		<input type="text" name="recherche" id="recherche" placeholder="recherche">
+			<input type="submit" value="Accepter">
     	</div>
             
         <div class="menuCategory">
