@@ -2,6 +2,7 @@
 
 <body>
     <?php include("include/header.php"); ?>
+    <?php include("include/nav2.php"); ?>
         <?php
         $requette='select p.* from products as p where p.type = 1';
         $req = $bdd->prepare($requette); 
