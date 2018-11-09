@@ -51,7 +51,7 @@
     	</div>
             
         <div class="menuCategory">
-			<a href="index.php?page=pageachat">Menu</a>
+			<a href="index.php?page=main">Menu</a>
     	</div>
 
     	<div class="menuCategory">
@@ -76,20 +76,21 @@ if (isset($_GET['page']) && $_GET['page'] ='pageachat'){
 	include('pageachat.php');
 	}
 //TODO mettre des else if pour les pages et un seul else pour revenir sur le main
-elseif (isset($_GET['page']) && $_GET['page'] ='pagepull'){
-	$_SESSION['index.php?page=pagepull'] = htmlentities($_GET['index.php?page=pagepull']);
-}
-elseif (isset($_GET['page']) && $_GET['page'] ='pagesweat'){
-	$_SESSION['index.php?page=pagesweat'] = htmlentities($_GET['index.php?page=pagesweat']);
-}
-elseif (isset($_GET['page']) && $_GET['page'] ='pagetshirt'){
-	$_SESSION['index.php?page=pagetshirt'] = htmlentities($_GET['index.php?page=pagetshirt']);
+
+elseif (isset($_GET['page']) && $_GET['page'] ='pagepres'){
+	$_SESSION['index.php?page=pagepres'] = htmlentities($_GET['index.php?page=pagepres']);
 }
 elseif (isset($_GET['page']) && $_GET['page'] ='pageinscription'){
 	$_SESSION['index.php?page=pageinscription'] = htmlentities($_GET['index.php?page=pageinscription']);
 }
 elseif (isset($_GET['page']) && $_GET['page'] ='pageconnexion'){
 	$_SESSION['index.php?page=pageconnexion'] = htmlentities($_GET['index.php?page=pageconnexion']);
+}
+elseif (isset($_GET['page']) && $_GET['page'] = 'inscriptionreussi'){
+	$_SESSION['index.php?page=inscriptionreussi'] = htmlentities($_GET['index.php?page=inscriptionreussi']);
+}
+elseif (isset($_GET['page']) && $_GET['page'] = 'pagepanier'){
+	$_SESSION['index.php?page=pagepanier'] = htmlentities($_GET['index.php?page=pagepanier']);
 }
 else{
 	include('main.php');
