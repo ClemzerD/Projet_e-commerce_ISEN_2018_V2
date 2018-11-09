@@ -1,5 +1,5 @@
 <?php
-//TODO start session
+//TODO start session blabla
 
 //TODO include database.php file
     //connecting to the BDD
