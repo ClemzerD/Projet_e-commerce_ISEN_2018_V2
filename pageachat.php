@@ -1,8 +1,7 @@
-<?php //include("include/head.php"); ?>
 
 <body>
 
-<?php //include("include/header.php"); ?>
+
     <?php
         if (isset($_GET['id']))
         {
@@ -76,6 +75,5 @@
 		</article>
 	</section>
 
-	<?php //include("include/footer.php"); ?>
 
 </body>

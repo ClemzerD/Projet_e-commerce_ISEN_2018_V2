@@ -36,11 +36,11 @@
 // TODO using $page decide to include header.php
 ?>
 <html> 
+
+<?php include('include/head.php');?>
+
+<body>
 <header>
-	<meta charset="utf-8">
-	<title>Rituel.com</title>
-    <link rel="stylesheet" href="css/main.css">
-	>
 	<?php include("include/header.php");?>
   <nav>
          
@@ -65,38 +65,74 @@
 
     </nav>
 </header>
-</html>
+<?php include('include/footer.php')?>
 
 <?php
 //TODO if 'view/'.$page'.php' exists then include it 
 //(use file_exists($filename) function)
 //else include 'view/main.php' (it has to exist)
 
+if(isset($_GET["page"])){
+    
+    $page = $_GET["page"];
+	
+	switch($page){
+		case"pagepres":
+		include'pagepres.php';
+		break;
+		
+		case"pageachat":
+		include'pageachat.php';
+		break;
+		
+		case"pageconnexion":
+		include'pageconnexion.php';
+		break;
+		
+		case"pageinscription":
+		include'pageinscription.php';
+		break;
+		
+		case"inscriptionreussi":
+		include'inscriptionreussi.php';
+		break;
+		
+		case"pagepanier":
+		include'pagepanier.php';
+		break;
+		
+		default:
+		include('main.php');
+		
+	}	
+}
 
-if (isset($_GET['page']) && $_GET['page'] ='pageachat'){
-	include('pageachat.php');
-	}
+// if (isset($_GET['page']) && $_GET['page'] ='pagepres'){
+	// include('pagepres.php');
+	// }
 //TODO mettre des else if pour les pages et un seul else pour revenir sur le main
 
-elseif (isset($_GET['page']) && $_GET['page'] ='pagepres'){
-	$_SESSION['index.php?page=pagepres'] = htmlentities($_GET['index.php?page=pagepres']);
-}
-elseif (isset($_GET['page']) && $_GET['page'] ='pageinscription'){
-	$_SESSION['index.php?page=pageinscription'] = htmlentities($_GET['index.php?page=pageinscription']);
-}
-elseif (isset($_GET['page']) && $_GET['page'] ='pageconnexion'){
-	$_SESSION['index.php?page=pageconnexion'] = htmlentities($_GET['index.php?page=pageconnexion']);
-}
-elseif (isset($_GET['page']) && $_GET['page'] = 'inscriptionreussi'){
-	$_SESSION['index.php?page=inscriptionreussi'] = htmlentities($_GET['index.php?page=inscriptionreussi']);
-}
-elseif (isset($_GET['page']) && $_GET['page'] = 'pagepanier'){
-	$_SESSION['index.php?page=pagepanier'] = htmlentities($_GET['index.php?page=pagepanier']);
-}
-else{
-	include('main.php');
-}
+// elseif (isset($_GET['page']) && $_GET['page'] ='pageachat'){
+	// $_SESSION['index.php?page=pageachat'] = htmlentities($_GET['index.php?page=pageachat']);
+// }
+// elseif (isset($_GET['page']) && $_GET['page'] ='pageinscription'){
+	// $_SESSION['index.php?page=pageinscription'] = htmlentities($_GET['index.php?page=pageinscription']);
+// }
+// elseif (isset($_GET['page']) && $_GET['page'] ='pageconnexion'){
+	// $_SESSION['index.php?page=pageconnexion'] = htmlentities($_GET['index.php?page=pageconnexion']);
+// }
+// elseif (isset($_GET['page']) && $_GET['page'] = 'inscriptionreussi'){
+	// $_SESSION['index.php?page=inscriptionreussi'] = htmlentities($_GET['index.php?page=inscriptionreussi']);
+// }
+// elseif (isset($_GET['page']) && $_GET['page'] = 'pagepanier'){
+	// $_SESSION['index.php?page=pagepanier'] = htmlentities($_GET['index.php?page=pagepanier']);
+// }
+// else{
+	// include('main.php');
+// }
 
 // pour les includes de pages, les écrire sous la forme index.php?page = "nom page"
 // TODO insert the end html envelope (</body></html>)
 ?>
+</body>
+</html>

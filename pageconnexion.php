@@ -1,7 +1,7 @@
-<?php //include("include/head.php"); ?>
+
 
 <body>
-    <?php //include("include/header.php"); ?>
+
 	<section>
 		<div class="text">
 			<form>
@@ -22,5 +22,5 @@
 
 	</section>
 		
-	<?php //include("include/footer.php"); ?>
+
 </body>
