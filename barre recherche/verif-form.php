@@ -1,4 +1,3 @@
-<?php include("include/head.php"); ?>
 
 <?php
 if (isset($_GET["Accepter"]) AND $_GET["Accepter"] == "Rechercher"){
