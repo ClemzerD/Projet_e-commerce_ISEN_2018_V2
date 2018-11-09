@@ -1,5 +1,5 @@
 <header><a id="headertitle" href="main.php">Rituel</a>
-    
+   <!-- 
     <nav>
          
         <div class="menuCategory">
@@ -20,5 +20,5 @@
 		</div>
 
     </nav>
-
+-->
 </header>

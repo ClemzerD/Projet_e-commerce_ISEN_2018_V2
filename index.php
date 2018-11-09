@@ -40,7 +40,8 @@
 	<meta charset="utf-8">
 	<title>Rituel.com</title>
     <link rel="stylesheet" href="css/main.css">
- 
+	>
+	<?php include("include/header.php");?>
   <nav>
          
         <div class="menuCategory">

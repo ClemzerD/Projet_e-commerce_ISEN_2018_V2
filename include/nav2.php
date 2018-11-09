@@ -1,27 +1,27 @@
 <nav2>
 	<ul id="menu">
-		       <li class="menu"><a href="pagesweat.php">Sweat</a>
+		       <li class="menu"><a href="index.php?page=pagesweat">Sweat</a>
 			      <ul>
-				     <li><a href="pageachat.php">Sweat Noir</a></li>
-				     <li><a href="pageachat.php">Sweat Blanc</a></li>
-				     <li><a href="pageachat.php">Sweat Noir Manches Longues</a></li>
-				     <li><a href="pageachat.php">Sweat Blanc Manches Longues</a></li>
+				     <li><a href="index.php?page=pageachat">Sweat Noir</a></li>
+				     <li><a href="index.php?page=pageachat">Sweat Blanc</a></li>
+				     <li><a href="index.php?page=pageachat">Sweat Noir Manches Longues</a></li>
+				     <li><a href="index.php?page=pageachat">Sweat Blanc Manches Longues</a></li>
 	             </ul>
 		       </li>
-		       <li class="menu"><a href="pagepull">Pull</a>
+		       <li class="menu"><a href="index.php?page = pagepull">Pull</a>
 			      <ul>
-				     <li><a href="pageachat.php">Pull Noir</a></li>
-				     <li><a href="pageachat.php">Pull Noir Manches Longues</a></li>
-				     <li><a href="pageachat.php">Pull Blanc</a></li>
-				     <li><a href="pageachat.php">Pull Blanc Manches longues</a></li>
+				     <li><a href="index.php?page=pageachat">Pull Noir</a></li>
+				     <li><a href="index.php?page=pageachat">Pull Noir Manches Longues</a></li>
+				     <li><a href="index.php?page=pageachat">Pull Blanc</a></li>
+				     <li><a href="index.php?page=pageachat">Pull Blanc Manches longues</a></li>
 			      </ul>
 		       </li>
-		       <li class="menu"><a href="pagetshirt">Tshirt</a>
+		       <li class="menu"><a href="index.php?page = pagetshirt">Tshirt</a>
 			      <ul>
-				     <li><a href="pageachat.php">Tshirt Noir</a></li>
-				     <li><a href="pageachat.php">Tshirt Noir Manches Longues</a></li>
-				     <li><a href="pageachat.php">Tshirt Blanc</a></li>
-				     <li><a href="pageachat.php">Tshirt Blanc Manches Longues</a></li>
+				     <li><a href="index.php?page=pageachat">Tshirt Noir</a></li>
+				     <li><a href="index.php?page=pageachat">Tshirt Noir Manches Longues</a></li>
+				     <li><a href="index.php?page=pageachat">Tshirt Blanc</a></li>
+				     <li><a href="index.php?page=pageachat">Tshirt Blanc Manches Longues</a></li>
 			      </ul>
 		       </li>
 	        </ul>

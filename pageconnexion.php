@@ -1,7 +1,7 @@
-<?php include("include/head.php"); ?>
+<?php //include("include/head.php"); ?>
 
 <body>
-    <?php include("include/header.php"); ?>
+    <?php //include("include/header.php"); ?>
 	<section>
 		<div class="text">
 			<form>
@@ -17,10 +17,10 @@
 
 		<div>
 			<p>Première connexion ?
-			<a href="pageinscription">S'inscrire</a></p>
+			<a href="index.php?page=pageinscription">S'inscrire</a></p>
 		</div>
 
 	</section>
 		
-	<?php include("include/footer.php"); ?>
+	<?php //include("include/footer.php"); ?>
 </body>

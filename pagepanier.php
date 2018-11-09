@@ -1,7 +1,7 @@
-<?php include("include/head.php"); ?>
+<?php //include("include/head.php"); ?>
 
 <body>
-    <?php include("include/header.php"); ?>
+    <?php //include("include/header.php"); ?>
     <?php
         $requette='select p.* from order_products as p where p.order_id=1';
         $req = $bdd->prepare($requette); 
@@ -27,7 +27,7 @@
 
             
         ?>
-            <a href="pageachat.php?id=<?php echo $results2['id']; ?>"><img src="<?php echo $results2['image']; ?>"><figcaption><?php echo $results2['nom']; ?></figcaption></a>
+            <a href="index.php?page=pageachat?id=<?php echo $results2['id']; ?>"><img src="<?php echo $results2['image']; ?>"><figcaption><?php echo $results2['nom']; ?></figcaption></a>
             <div class="infoarticle">
             	Prix : <?php echo $results2['prix'];?><br>
             </div>
@@ -50,5 +50,5 @@
 
 	</section>
 		
-	<?php include("include/footer.php"); ?>
+	<?php //include("include/footer.php"); ?>
 </body>
