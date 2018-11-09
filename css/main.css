@@ -16,7 +16,7 @@ html
 
 a {
 	text-decoration: none;
-	font-family: Onyx;
+	font-family: arial;
 	color:black;}
 .img {
 	text-align: center;
@@ -31,6 +31,8 @@ nav2 {
     margin-left: 0px;
     margin-top: 0px;
     box-shadow: 0px 3px 10px #999999;
+    
+    
     
 }
 
@@ -50,6 +52,7 @@ nav2 a{
     background-color:black;
     margin-bottom: 0;
     margin-top: 0;
+    
 
 }
 
@@ -57,7 +60,7 @@ nav2 a{
     
     padding:0;   
     list-style:none;
-
+    
 }
 
 #menu li{
@@ -120,12 +123,14 @@ nav2 a{
 
 #menu li:hover a {
     
-    color: white;
+    color: darkred;
+    font-weight:bold;
 } 
 
 #menu li li:hover a{
     
-    color:white;
+    color:darkred;
+    font-weight:bold;
 }
 
 #menu .menu:hover{
