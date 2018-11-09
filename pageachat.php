@@ -4,10 +4,24 @@
 
 <?php include("include/header.php"); ?>
     <?php
-        $requette='select p.* from products as p where p.type = 2'; // <-- j'arrive pas a automatiser le truc pour que ca affiche l'article qui possede l'id sur lequel on a clic à la page precedente sur le site ...
+        if (isset($_GET['id']))
+        {
+            $id = $_GET['id'];
+        }
+        else 
+        {
+            $id = $_GET['product_id'];
+        }
+
+        $requette='select p.* from products as p where p.id=?';
+        $requette2 = 'insert into order_products(order_id, product_id, quantity, unit_price) values (:order_id, :product_id, :quantity, :unit_price)';
         $req = $bdd->prepare($requette); 
-        $req->execute();
+        $req2 = $bdd->prepare($requette2);
+        $req->execute(array($id));
         $results = $req->fetch();
+        //var_dump($results);
+        
+         
     ?>
 
     <aside>
@@ -28,8 +42,23 @@
                     <td>
                         <?php echo $results['taille']; ?>
                     </td>
+                </tr>
             </table>
-            <a href="pagepanier.php?id=<?php echo $results['id']; ?>"><input id ="button" type="button" value="Ajouter au panier"></tr></a>
+            <form>
+                    <input type="hidden" name="order_id" value="1"/>
+                    <input type="hidden" name="product_id" value=<?php echo $id?>>
+                    <input type="hidden" name="quantity" value="1">
+                    <input type="hidden" name="unit_price" value=<?php echo $results['prix']?>>
+                    <input type="submit" value="Ajouter au panier"/>
+            </form>
+            <?php 
+            if (isset($_GET['order_id']) AND isset($_GET['product_id']) AND isset($_GET['quantity']) AND isset($_GET['unit_price'])){
+                $req2->execute(array(
+                'order_id' => $_GET['order_id'],
+                'product_id' => $_GET['product_id'],
+                'quantity' => $_GET['quantity'],
+                'unit_price' => $_GET['unit_price']));
+            }?>
         </div>
     </aside>
 
@@ -50,4 +79,3 @@
 	<?php include("include/footer.php"); ?>
 
 </body>
-</html>

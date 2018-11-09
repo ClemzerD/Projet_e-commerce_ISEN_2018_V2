@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 26 oct. 2018 à 12:17
+-- Généré le :  ven. 19 oct. 2018 à 09:45
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -103,15 +103,16 @@ CREATE TABLE IF NOT EXISTS `order_products` (
   PRIMARY KEY (`id`),
   KEY `IDX_order_product` (`order_id`),
   KEY `IDX_product_order` (`product_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Déchargement des données de la table `order_products`
 --
 
 INSERT INTO `order_products` (`id`, `order_id`, `product_id`, `quantity`, `unit_price`, `created_at`, `updated_at`) VALUES
-(4, 2, 1, 2, 50, '2018-10-12 14:07:07', '2018-10-12 14:07:07'),
-(9, 1, 19, 1, 35, '2018-10-26 14:14:48', '2018-10-26 14:14:48');
+(2, 1, 1, 1, 57.08, '2018-10-12 14:07:07', '2018-10-12 14:07:07'),
+(3, 1, 2, 3, 46.22, '2018-10-12 14:07:07', '2018-10-12 14:07:07'),
+(4, 2, 1, 2, 50, '2018-10-12 14:07:07', '2018-10-12 14:07:07');
 
 -- --------------------------------------------------------
 
@@ -196,7 +197,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`),
   KEY `IDX_user_billing_adress` (`billing_adress_id`),
   KEY `IDX_user_delivery_adress` (`delivery_adress_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Déchargement des données de la table `users`
@@ -204,15 +205,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `billing_adress_id`, `delivery_adress_id`, `created_at`, `updated_at`) VALUES
 (2, 'Fred Eric', 'fred.eric@example.com', 'password', 1, 2, '2018-10-12 14:07:06', '2018-10-12 14:07:06'),
-(3, 'Frederic', 'frederic@example.com', 'password', 3, 4, '2018-10-12 14:07:06', '2018-10-12 14:07:06'),
-(4, 'AZER', 'AZER1234', '1234', NULL, NULL, '2018-10-26 13:50:16', '2018-10-26 13:50:16'),
-(5, 'AZER', 'AZER1234', '1234', NULL, NULL, '2018-10-26 13:52:06', '2018-10-26 13:52:06'),
-(6, '', '', '', NULL, NULL, '2018-10-26 13:56:38', '2018-10-26 13:56:38'),
-(7, '', '', '', NULL, NULL, '2018-10-26 13:57:29', '2018-10-26 13:57:29'),
-(8, 'AZE', 'AZE123', '123', NULL, NULL, '2018-10-26 13:57:48', '2018-10-26 13:57:48'),
-(9, 'AZE', 'AZE123', '123', NULL, NULL, '2018-10-26 13:58:34', '2018-10-26 13:58:34'),
-(10, 'AZE', 'AZE123', '123', NULL, NULL, '2018-10-26 13:58:47', '2018-10-26 13:58:47'),
-(11, 'AZE', 'AZE123', '123', NULL, NULL, '2018-10-26 13:59:14', '2018-10-26 13:59:14');
+(3, 'Frederic', 'frederic@example.com', 'password', 3, 4, '2018-10-12 14:07:06', '2018-10-12 14:07:06');
 
 -- --------------------------------------------------------
 

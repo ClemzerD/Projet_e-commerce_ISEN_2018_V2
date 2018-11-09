@@ -1,21 +1,27 @@
-<?php /*include("include/head.php");*/ ?>
+<?php include("include/head.php"); ?>
 
 <body>
-	<!--Titre-->
     <?php include("include/header.php"); ?>
+        <?php
+        $requette='select p.* from products as p where p.type = 1';
+        $req = $bdd->prepare($requette); 
+        $req->execute();
+        $results = $req->fetchAll();
+        //var_dump($results);
+    ?>
 
 	<section>
 		<div class="pres">
 			<figure>
-    			<a href="pagesweat.php"><img id="photopres" src="image/sweat.jpg" alt="sweat" />
-    			<figcaption>SWEAT</figcaption></a>
+          <a href="pagepres.php?type=1"><img id="photopres" src="image/sweatnoirml.jpg" alt="sweat" />
+          <figcaption>SWEAT</figcaption></a>
     		</figure>
     		<figure>
-    			<a href="pagepull.php"><img id="photopres" src="image/pull.jpg" alt="pull" />
+    			<a href="pagepres.php?type=2"><img id="photopres" src="image/pullnoirml.jpg" alt="pull" />
    				<figcaption>PULL</figcaption></a>
    			</figure>
    			<figure>
-    			<a href="pagetshirt.php"><img id="photopres" src="image/tshirt.jpg" alt="tshirt" />
+    			<a href="pagepres.php?type=3"><img id="photopres" src="image/tshirtnoirmc.jpg" alt="tshirt" />
     			<figcaption>T-SHIRT</figcaption></a>
    			</figure>
 		</div>
@@ -23,4 +29,3 @@
 
 	<?php include("include/footer.php"); ?>
 </body>
-</html>
