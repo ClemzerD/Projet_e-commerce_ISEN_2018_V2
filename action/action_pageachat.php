@@ -1,4 +1,3 @@
-
 <?php
 if (isset($_GET['id'])){
     $id = $_GET['id'];
@@ -16,13 +15,14 @@ $results = $req->fetch();
 ?>
 
 <?php 
-function infoproduct(){
+function infoproduct($data_requette){
     if (isset($_GET['order_id']) AND isset($_GET['product_id']) AND isset($_GET['quantity']) AND isset($_GET['unit_price'])){
-        $req2->execute(array(
+        $data_requette->execute(array(
+
         'order_id' => $_GET['order_id'],
         'product_id' => $_GET['product_id'],
         'quantity' => $_GET['quantity'],
         'unit_price' => $_GET['unit_price']));
-    return ('order_id','product_id','quantity','unit_price');
+    }
 }
-}?>
+?>

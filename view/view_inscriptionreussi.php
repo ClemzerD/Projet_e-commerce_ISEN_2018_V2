@@ -1,5 +1,5 @@
 <body>
     <section>
-        <?php echo messageConnect(); ?>
+        <?php echo messageConnect($req); ?>
     </section>
 </body>

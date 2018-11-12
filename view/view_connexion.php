@@ -1,7 +1,8 @@
 <body>
 	<section>
 		<div class="text">
-			<form>
+			<form method="get" action="index.php">
+				<input type="hidden" name="page" value="view_main">
 				<label for="Pseudo">Pseudo :</label>
 				<input type="text" name="Pseudo" id="Pseudo" size="30" maxlength="20"/>
 				<label for="Password">Mot de passe :</label>
@@ -9,12 +10,9 @@
 				<input type="submit" value="Connexion">
 			</form>
 		</div>
-
 		<div>
 			<p>Première connexion ?
-			<a href="pageinscription">S'inscrire</a></p>
+			<a href="index.php?page=pageinscription">S'inscrire</a></p>
 		</div>
-
 	</section>
-
 </body>

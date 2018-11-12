@@ -3,18 +3,18 @@ $requette = 'insert into users(username, password, email) values (:username, :pa
 $req = $bdd->prepare($requette);
 
 
-function messageConnect () {
+function messageConnect ($data_requette) {
     $message = "Un problème est survenu lors de l'inscription, veuillez réessayer plus tard.";
-    if (isset($_POST['pseudo']) AND isset($_POST['password']) AND isset($_POST['confirmation']) AND isset($_POST['email'])){
-       	if ($_POST['password'] == $_POST['confirmation']){
-      		$req->execute(array(
-         	'username' => $_POST['pseudo'],
-          	'password' => $_POST['password'],
-        	'email' => $_POST['email']));
-        	$message = "Inscription terminée, bienvenue sur le site de Rituel, ", $_POST['pseudo'];
+    if (isset($_GET['pseudo']) AND isset($_GET['password']) AND isset($_GET['confirmation']) AND isset($_GET['email'])){
+       	if ($_GET['password'] == $_GET['confirmation']){
+      		  $data_requette->execute(array(
+         	  'username' => $_GET['pseudo'],
+            'password' => $_GET['password'],
+        	  'email' => $_GET['email']));
+        	  $message = "Inscription terminée, bienvenue sur le site de Rituel"/*, $_GET['pseudo']*/;
 	    	}
-    	else{ $message =  "Validation du mot de passe incorrecte";}
-                    
+    	  else{ $message =  "Validation du mot de passe incorrecte";}
+    }           
 
     return $message;
 }

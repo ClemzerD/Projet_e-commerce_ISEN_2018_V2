@@ -1,7 +1,6 @@
-<?php include("include/head.php"); ?>
 
 <body>
-    <?php include("include/header.php"); ?>
+
     <?php 
     $requette = 'insert into users(username, password, email) values (:username, :password, :email)';
     $req = $bdd->prepare($requette);
@@ -24,9 +23,9 @@
             return $message;
         }
         ?>
-        <?php echo messageConnect();
+        <?php echo messageConnect();?>
 
 	</section>
 		
-	<?php include("include/footer.php"); ?>
+
 </body>

@@ -1,7 +1,8 @@
 <body>
 	<section>
 		<div class="text">
-			<form action="inscriptionreussi.php" method="post">
+			<form methode="get" action="index.php">
+				<input type="hidden" name="page" value="inscriptionreussi">
 				<label for="Pseudo">Votre pseudo :</label>
 				<input type="text" name="pseudo" placeholder="Ex : Toto" size="30" maxlength="20"/>
 				<label for="Password">Mot de passe :</label>

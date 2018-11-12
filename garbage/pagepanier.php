@@ -1,18 +1,19 @@
-<?php include("include/head.php"); ?>
+
 
 <body>
     <?php include("include/header.php"); ?>
     <?php
-        $requette='select p.* from order_products as p where p.order_id=1';
-        $req = $bdd->prepare($requette); 
-        $req->execute(array());
-        $results = $req->fetchAll();
-        //var_dump($results);
         $requette3='delete from order_products where order_id=1 and product_id=?';
         $req3 = $bdd->prepare($requette3);
         if (isset($_GET['id'])){
                 $req3->execute(array($_GET['id']));
             }
+        $requette='select p.* from order_products as p where p.order_id=1';
+        $req = $bdd->prepare($requette); 
+        $req->execute(array());
+        $results = $req->fetchAll();
+        //var_dump($results);
+
     ?>
 
 	<section>
@@ -49,6 +50,5 @@
         Prix total du panier : <?php echo $total; ?> €
 
 	</section>
-		
-	<?php include("include/footer.php"); ?>
+
 </body>
