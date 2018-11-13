@@ -120,13 +120,14 @@ switch($page){
 	break;
 	
 	case"pageinscription":
+	include'action/action_pageinscription.php';
 	include'view/view_pageinscription.php';
 	break;
 	
-	case"inscriptionreussi":
+	/*case"inscriptionreussi":
 	include'action/action_inscriptionreussi.php';
 	include'view/view_inscriptionreussi.php';
-	break;
+	break;*/
 	
 	case"pagepanier":
 	include'action/action_pagepanier.php';
