@@ -1,9 +1,7 @@
-<?php include("include/head.php"); ?>
+
 
 <body>
-    <?php include("include/header.php"); ?>
-    <?php include("include/nav2.php"); ?>
-        <?php
+    <?php
         $requette='select p.* from products as p where p.type = 1';
         $req = $bdd->prepare($requette); 
         $req->execute();
@@ -28,5 +26,4 @@
 		</div>
 	</section>
 
-	<?php include("include/footer.php"); ?>
 </body>

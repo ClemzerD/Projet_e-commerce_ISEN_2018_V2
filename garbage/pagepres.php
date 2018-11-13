@@ -1,4 +1,4 @@
-<?php include("include/head.php"); ?>
+
 
 <body>
     <!--Titre-->
@@ -16,7 +16,7 @@
 
           <?php foreach ($results as $key => $value) { ?>
             <figure>
-              <a href="pageachat.php?id=<?php echo $value['id']; ?>"><img src="<?php echo $value['image']; ?>"><figcaption><?php echo $value['nom']; ?></figcaption></a>
+              <a href="index.php?page=view/view_pageachat.php?id=<?php echo $value['id']; ?>"><img src="<?php echo $value['image']; ?>"><figcaption><?php echo $value['nom']; ?></figcaption></a>
             </figure>
           <?php } ?>
 
@@ -24,6 +24,6 @@
 
     </section>
 
-<?php include("include/footer.php"); ?>
+
 
 </body>
