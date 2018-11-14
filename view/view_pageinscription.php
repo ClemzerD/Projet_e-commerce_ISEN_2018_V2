@@ -14,7 +14,7 @@
 				<input type="password" name="confirmation" size="30" maxlength="20"/>
 
 				<label for="E-mail">E-mail :</label>
-				<input type="e-mail" name="email" placeholder="Ex : dupont.dupond@blabla.fr"
+				<input type="email" name="email" placeholder="Ex : dupont.dupond@blabla.fr"
 				size="30" maxlength="30" />
 
 				<input type="submit" value="Finaliser l'inscription">

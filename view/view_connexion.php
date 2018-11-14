@@ -1,18 +1,21 @@
 <body>
-	<section>
-		<div class="text">
-			<form method="get" action="index.php">
-				<input type="hidden" name="page" value="view_main">
-				<label for="Pseudo">Pseudo :</label>
-				<input type="text" name="Pseudo" id="Pseudo" size="30" maxlength="20"/>
-				<label for="Password">Mot de passe :</label>
-				<input type="password" name="Password" id="Password" size="30" maxlength="20"/>
-				<input type="submit" value="Connexion">
-			</form>
-		</div>
-		<div>
-			<p>Première connexion ?
-			<a href="index.php?page=pageinscription">S'inscrire</a></p>
-		</div>
-	</section>
+	<?php 
+	if (!isset($_SESSION['id'])){ ?>
+		<section>
+			<div class="text">
+				<form method="get" action="index.php">
+					<input type="hidden" name="page" value="pageconnexion">
+					<label for="username">Pseudo :</label>
+					<input type="text" name="username" id="username" size="30" maxlength="20"/>
+					<label for="password">Mot de passe :</label>
+					<input type="password" name="password" id="password" size="30" maxlength="20"/>
+					<input type="submit" value="Connexion">
+				</form>
+			</div>
+			<div>
+				<p>Première connexion ?
+				<a href="index.php?page=pageinscription">S'inscrire</a></p>
+			</div>
+		</section>
+	<?php }  ?>
 </body>

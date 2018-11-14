@@ -7,7 +7,8 @@
         ?>
             <a href="index.php?page=pageachat&id=<?php echo $results2['id']; ?>"><img src="<?php echo $results2['image']; ?>"><figcaption><?php echo $results2['nom']; ?></figcaption></a>
             <div class="infoarticle">
-                Prix : <?php echo $results2['prix'];?><br>
+                Quantité : <?php echo $value['quantity']; ?><br>
+                Prix : <?php echo $results2['prix']*$value['quantity'];?><br>
             </div>
 
             <form method="get" action="index.php">
@@ -15,7 +16,7 @@
                 <input type="hidden" name="id" value=<?php echo $results2['id']?>>
                 <input type="submit" value="Supprimer">
             </form>
-            <?php $total = $total + $results2['prix']; ?>
+            <?php $total = $total + $results2['prix']*$value['quantity']; ?>
             <br> 
 
         <?php } ?>

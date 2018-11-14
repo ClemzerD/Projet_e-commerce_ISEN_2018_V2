@@ -25,16 +25,19 @@ function messageConnect ($results, $data_requette) {
         $username = $_GET['username'];
         $password = $_GET['password'];
 
+        if (strlen($username)<3){ $message = "pseudo incorrect"; return $message;}
+        if (strlen($password)<3){ $message = "password incorrect"; return $message;}
+
         if (test_doublon($results, $username, $password) == false){ $message = "Pseudo ou mot de passe déjà utilisé"; }
 
         else{
 
            	if ($_GET['password'] == $_GET['confirmation']){
-          		  $data_requette->execute(array(
-             	  'username' => $_GET['username'],
+          		$data_requette->execute(array(
+             	'username' => $_GET['username'],
                 'password' => $_GET['password'],
-            	  'email' => $_GET['email']));
-            	  $message = "Inscription terminée, bienvenue sur le site de Rituel"/*, $_GET['pseudo']*/;
+            	'email' => $_GET['email']));
+            	$message = "Inscription terminée, bienvenue sur le site de Rituel ". $_GET['username'];
     	    	}
 
       	    else{ $message =  "Validation du mot de passe incorrecte";}
