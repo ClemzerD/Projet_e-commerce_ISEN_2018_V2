@@ -13,6 +13,8 @@ if (isset($_GET['recherche'])&& !empty($_GET['recherche'])){
 	    	foreach ($results as $key => $value) { ?>
 		        <figure>
 		        <a href="index.php?page=pageachat&id=<?php echo $value['id']; ?>"><img src="<?php echo $value['image']; ?>"><figcaption><?php echo $value['nom']; ?></figcaption></a>
+                <br/>
+                <br/>
 		        </figure>
 	    	<?php 
 			} 

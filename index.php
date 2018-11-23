@@ -25,7 +25,7 @@
 
 // TODO using $page decide to include header.php
 if(isset($_GET["page"])){$page = $_GET["page"];}
-else{$page = 'null';}
+else{$page = 'acceuil';}
 
 
 switch($page){
@@ -92,6 +92,10 @@ switch($page){
 	case"pagepres":
 	include'view/view_pagepres.php';
 	break;
+        
+    case"acceuil":
+    include'view/PageAcceuil.php';
+    break;
 	
 	case"pageachat":
 	include'view/view_pageachat.php';
